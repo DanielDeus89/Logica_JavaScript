@@ -5,3 +5,17 @@ Valor da Conta R$: 90.00
 Número de Clientes: 3
 Valor por cliente R$: 30.00 
 -->
+
+<script>
+    let valorConta = parseFloat(prompt("Valor total da conta: "));
+    let qtdClientes = parseInt(prompt("Quantidade de clientes: "));
+
+    let message = (isNaN(valorConta) || isNaN(qtdClientes))
+    ? "Valor inválido. Por favor, insira um número válido."
+    : (qtdClientes <= 0)
+        ? "A quantidade de clientes deve ser maior que zero."
+        : `Valor da Conta R$: ${valorConta.toFixed(2)}\nNúmero de Clientes: ${qtdClientes}\nValor por Cliente R$: ${(valorConta / qtdClientes).toFixed(2)}`;
+
+    alert(message);    
+</script>
+

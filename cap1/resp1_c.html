@@ -5,3 +5,13 @@ Preço R$: 60.00
 À Vista R$: 54.00
 Ou 3x de R$: 20.00
 -->
+
+<script>
+    let preco = parseFloat(prompt("Insira o valor do Produto: "));
+
+    let aVista = preco - (preco * 0.1);
+    let parcelas = preco / 3;
+
+    alert(isNaN(preco) ? "informe um preço valido" : 
+    `Preço R$: ${preco.toFixed(2)}\nÀ Vísta R$ ${aVista}\nOu 3x de R$: ${parcelas.toFixed(2)}`);
+</script>

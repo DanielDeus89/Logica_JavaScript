@@ -1,5 +1,11 @@
-function mostrarOla() {
-    let nome = document.getElementById("nome").value;
-    document.getElementById("resposta").innerHTML = "Olá " + nome;
+function mostrar(){
+    let inNome = document.getElementById("nome");
+    let nome = inNome.value;
+
+    document.getElementById("resposta").textContent = `Ola ${nome}` ;
 }
-let mostrar = document.getElementById("mostrar").addEventListener("click", mostrarOla);
+
+let Mostrar = document.getElementById("btMostrar").addEventListener("click", mostrar);
+
+
+

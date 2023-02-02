@@ -1,7 +1,23 @@
 <!-- 
-d) Elaborar um programa que leia 2 notas de um aluno em uma disciplina. Calcule e informe a média das notas.
+d) Elaborar um programa que leia 2 notas de um aluno em uma disciplina. 
+Calcule e informe a média das notas.
 Exemplo:
 1ª Nota: 7.0
 2ª Nota: 8.0
+<<<<<<< HEAD
 Média: 7.5 
 -->
+=======
+Média: 7.5 -->
+
+<script>
+    let primeiraNota = parseFloat(prompt(`Insira a Primeira Nota: `));
+    let segundaNota = parseFloat(prompt(`Insira a Segunda Nota: `));
+
+    let media = (primeiraNota + segundaNota) / 2;
+
+    alert(isNaN(primeiraNota) || isNaN(segundaNota)? `Uma das notas é invalida, por favor informe novamente.` : 
+    `1ª Nota: ${primeiraNota.toFixed(1)}\n2ª Nota: ${segundaNota.toFixed(1)}\nMédia: ${media.toFixed(1)}`);
+
+</script>
+>>>>>>> fb7fdd8cdda065230dbe6398a1b8934bf620c461

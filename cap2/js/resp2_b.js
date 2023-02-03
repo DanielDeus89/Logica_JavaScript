@@ -4,3 +4,17 @@
 // sabendo que as frações extras de 15 minutos devem ser cobradas de
 // forma integral. A Figura 2.12 exibe um exemplo com dados do
 // programa
+function calcularValor(){
+    let inPreco = document.getElementById("inPreco");
+    let inTempo = document.getElementById("inTempo");
+
+    let preco = inPreco.value;
+    let tempo = inTempo.value;
+
+    let valor = Math.ceil(tempo / 15) * preco;
+
+    document.getElementById("outValor").textContent = `Valor a Pagar: R$: ${valor.toFixed(2)}`;
+}
+
+let btCalcular = document.getElementById("btCalcular");
+btCalcular.addEventListener("click", calcularValor);

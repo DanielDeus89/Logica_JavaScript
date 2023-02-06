@@ -9,16 +9,17 @@ function verificarPrimo(){
         return;
     }
 
-    let numDivisores = 0;
-    for(let i=1; i<=numero; i++){
+    let temDivisor = 0;
+    for(let i=2; i<=numero / 2; i++){
         if(numero % i == 0){
-            numDivisores++;
-            // console.log(numDivisores);
+            temDivisor = 1;
+            break;
+            console.log(temDivisor);
         }
     }
 
     let resp = "";
-    if(numDivisores==2){
+    if(numero>1 && !temDivisor){
         resp = `${numero} É primo`;
     }else{
         resp = `${numero} Não é primo`;

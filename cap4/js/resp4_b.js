@@ -12,7 +12,7 @@ function mostrarPrevisao(){
     let animal = Number(inAnimal.value);
     let ano = Number(inAnos.value);
 
-    if(!animal || !ano){
+    if(!animal || !ano || animal<2){
         alert("Valores invalidos");
         inAnimal.focus();
         return;

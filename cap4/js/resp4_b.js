@@ -22,7 +22,6 @@ function mostrarPrevisao(){
     let total = "";
     for(let i=1; i<=ano; i++){        
         total = animal * i *3;
-        let axu = total*3;
         resp+=`${i}º ano: ${total}\n`;
         
     }

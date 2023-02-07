@@ -29,4 +29,5 @@ function calcularMedia(){
     outSituacao.style.color = corStatus;
     
 }
-let exibirMedia = document.getElementById("exibirMedia").addEventListener("click", calcularMedia);
+let exibirMedia = document.getElementById("exibirMedia");
+exibirMedia.addEventListener("click", calcularMedia);

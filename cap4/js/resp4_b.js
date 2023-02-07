@@ -19,13 +19,12 @@ function mostrarPrevisao(){
     }
 
     let resp = "";
-    let total = "";
-    for(let i=1; i<=ano; i++){        
-        total = animal * i *3;
-        resp+=`${i}º ano: ${total}\n`;
-        
+    let total = animal;
+    for(let i=1; i<=ano; i++){      
+             
+        resp+=`${i}º ano: ${total}\n`;  
+        total *= 3;  
     }
-
     document.getElementById("outAnimais").textContent = resp;
 }
 let btMostrar = document.getElementById("btMostrar").addEventListener("click",mostrarPrevisao);

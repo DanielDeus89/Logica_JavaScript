@@ -1,3 +1,9 @@
+img.direita{
+    float: right;
+    height: 300px;
+    width: 300px;
+}
+
 img.normal{
     float: left;
     height: 300px;

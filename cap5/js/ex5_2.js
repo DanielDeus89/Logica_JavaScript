@@ -1,5 +1,5 @@
 let erros = [];
-let sorteado = Math.floor(Math.random()*5)+1;
+let sorteado = Math.floor(Math.random()*100)+1;
 
 const CHANCES = 6;
 

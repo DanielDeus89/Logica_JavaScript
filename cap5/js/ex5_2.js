@@ -6,9 +6,9 @@ const CHANCES = 6;
 
 function apostarNumero(){
     let inNumero = document.getElementById("inNumero");
-    let numero = Number(inNumero.value);
+    let numero = Number(Math.floor(inNumero.value));
  
-    if(!numero || numero<=0 || numero > 100){
+    if(!numero || numero<=0 || numero > 100 || Math.floor(numero)){
         alert("Informe um Número valido...");
         inNumero.focus();
         return;

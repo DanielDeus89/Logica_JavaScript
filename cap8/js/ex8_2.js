@@ -1,44 +1,51 @@
-function trocarclube(){
+var inputsRadio = document.getElementsByTagName("input");
+
+for (var i = 0; i < inputsRadio.length; i++) {
+  inputsRadio[i].addEventListener("change", trocarClube);
+}
+
+function trocarClube(){
     let imgClube = document.getElementById("imgClube")
-    let divTitulo = document.getElementById("divTitulo")
+    let divTitullo = document.getElementById("divTitullo")
 
-    var clubles = ['Brasil','Pelotas','Farroupilha']
+    let clubes = [`Brasil`, `Pelotas`, `Farroupilha`];
 
-    for(let i=0; i<4; i++){
+    for (let i=0; i<4; i++){
         if(inputsRadio[i].checked){
-            let selecaoo = i
+            var selecao = i
             break
         }
     }
-    if(selecaoo <= 2){
-        divTitulo.className = `row cores${clubles[selecaoo]}`
-        imgClube.src = `img/${clubles[selecaoo].toLocaleLowerCase()}.png`
-        imgClube.className = 'exibir'
-        imgClube.alt = `Simbolo do ${clubles[selecaoo]}`
-        localStorage.setItem(`clube`,clubles[selecaoo])
+    
+    if(selecao <=2){
+        divTitullo.className = `row cores${clubes[selecao]}`
+
+
+        imgClube.src = `./img/${clubes[selecao].toLowerCase()}.png`
+        imgClube.className = `exibe`
+        imgClube.alt = `Simbolo do ${clubes[selecao]}`    
+        localStorage.setItem(`clube`, clubes[selecao])
     }else{
-        divTitulo.className = `row`
+        divTitullo.className = `row`
+        imgClube.className = `oculta`
         imgClube.alt = ``
         localStorage.removeItem(`clube`)
-    }
+    } 
 }
+
 
 function verificarClube(){
     if(localStorage.getItem(`clube`)){
+        var clube = localStorage.getItem(`clube`)
 
-        let clube = localStorage.getItem(`clube`)
-
-        if(clube == `Brasil`){
+        if(clube == "Brasil"){
             inputsRadio[0].checked = true
-        }else if(clube == `Pelotas`){
+        }else if(clube == "Pelotas"){
             inputsRadio[1].checked = true
         }else{
             inputsRadio[2].checked = true
         }
-
-
-        trocarclube()
+        trocarClube()
     }
 }
-
 verificarClube()

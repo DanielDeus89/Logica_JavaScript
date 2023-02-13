@@ -87,5 +87,7 @@ function resumirLista(){
     document.getElementById("outLista").textContent = resumo;
 
 }
+
+
 let btResumir = document.getElementById("btResumir")
 btResumir.addEventListener("click",resumirLista)

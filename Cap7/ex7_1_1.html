@@ -1,0 +1,9 @@
+<script>
+    function obterSituacao(nota, media){
+        let situacao = (nota > media) ? "Aprovado" : "Reprovado";
+        return situacao;
+    }
+    let prova = Number(prompt("Qual Nota: "));
+
+    alert(obterSituacao(prova, 7));
+</script>
